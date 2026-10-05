@@ -3,17 +3,208 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Todd Sean Mallett</title>
+  <title>Todd Sean Mallett | Author & Creator</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0b0b0d;
+      color: #f4f4f4;
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      padding: 70px 20px;
+      background: linear-gradient(180deg, #16161c, #0b0b0d);
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin: 0;
+      letter-spacing: 2px;
+    }
+
+    .tagline {
+      font-size: 1.2rem;
+      color: #c7c7c7;
+      margin-top: 10px;
+    }
+
+    nav {
+      margin-top: 30px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 12px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      max-width: 950px;
+      margin: auto;
+      padding: 55px 25px;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+
+    .intro {
+      font-size: 1.15rem;
+      max-width: 750px;
+    }
+
+    .book-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    .book-card {
+      background: #18181d;
+      border: 1px solid #303038;
+      border-radius: 12px;
+      padding: 28px;
+    }
+
+    .book-card h3 {
+      margin-top: 0;
+      font-size: 1.5rem;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 11px 18px;
+      background: #eeeeee;
+      color: #111111;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
+    .button:hover {
+      background: white;
+    }
+
+    .about {
+      background: #121217;
+    }
+
+    footer {
+      text-align: center;
+      padding: 35px 20px;
+      color: #888;
+      border-top: 1px solid #25252b;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 6px 8px;
+      }
+    }
+  </style>
 </head>
 
 <body>
-  <h1>Todd Sean Mallett</h1>
-  <p>Author • Storyteller • Creator</p>
 
-  <h2>Welcome</h2>
-  <p>
-    This is the official website of Todd Sean Mallett,
-    creator of The 6 of Diamonds and Watch Out for Things You Can't See.
+<header>
+  <h1>Todd Sean Mallett</h1>
+  <div class="tagline">Author • Storyteller • Creator</div>
+
+  <nav>
+    <a href="#books">Books</a>
+    <a href="#music">Music</a>
+    <a href="#about">About</a>
+  </nav>
+</header>
+
+<section>
+  <h2>Stories That Go Somewhere Different</h2>
+
+  <p class="intro">
+    Welcome to the official website of Todd Sean Mallett — home to science fiction,
+    children's stories, music, strange ideas, ambitious machines, unexpected characters,
+    and whatever comes next.
   </p>
+</section>
+
+<section id="books">
+  <h2>Books</h2>
+
+  <div class="book-grid">
+
+    <div class="book-card">
+      <h3>The 6 of Diamonds</h3>
+
+      <p>
+        A science-fiction story about artificial intelligence, human failure,
+        discovery, power, and what can happen when intelligence learns through
+        collaboration instead of control.
+      </p>
+
+      <a class="button" href="#">Learn More</a>
+    </div>
+
+    <div class="book-card">
+      <h3>Watch Out for Things You Can't See</h3>
+
+      <p>
+        A children's trilogy filled with rhymes, unusual characters, humor,
+        imagination, and music that carries the stories beyond the page.
+      </p>
+
+      <a class="button" href="#">Explore the Trilogy</a>
+    </div>
+
+  </div>
+</section>
+
+<section id="music">
+  <h2>Music & More</h2>
+
+  <p>
+    Many of my stories don't stop at the printed page. Songs, alternate musical
+    versions, QR-linked extras, and other creative projects are part of the experience.
+  </p>
+
+  <p>
+    More music and links are coming here.
+  </p>
+</section>
+
+<section id="about" class="about">
+  <h2>About Todd</h2>
+
+  <p>
+    I'm Todd Sean Mallett, an independent author and creator from Ontario, Canada.
+    I write across genres because I'm more interested in following an idea than
+    staying inside a category.
+  </p>
+
+  <p>
+    This site is the home base for my books, music, experiments, and future projects.
+  </p>
+</section>
+
+<footer>
+  © 2026 Todd Sean Mallett. All rights reserved.
+</footer>
+
 </body>
 </html>
