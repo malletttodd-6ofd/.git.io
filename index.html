@@ -3,400 +3,94 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Todd Sean Mallett | Author & Creator</title>
-
-  <meta name="description"
-        content="Official website of author and creator Todd Sean Mallett, featuring The 6 of Diamonds and the 64th Resonance, Watch Out for Things You Can't See, music, stories and more.">
-
+  <meta name="description" content="Official website of author and creator Todd Sean Mallett, featuring The 6 of Diamonds and the 64th Resonance, Watch Out for Things You Can't See, music, stories and more.">
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background:
-        radial-gradient(circle at top, #20202a 0%, #101015 38%, #070709 100%);
-      color: #f4f4f4;
-      line-height: 1.6;
-    }
-
-    a {
-      color: inherit;
-    }
-
-    header {
-      min-height: 72vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 90px 24px 70px;
-      border-bottom: 1px solid #34343c;
-    }
-
-    .name {
-      font-size: clamp(2.8rem, 8vw, 6rem);
-      letter-spacing: 4px;
-      text-transform: uppercase;
-      margin-bottom: 12px;
-      line-height: 1.05;
-    }
-
-    .tagline {
-      color: #c7c7cc;
-      font-size: 1.15rem;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      margin-bottom: 38px;
-    }
-
-    .hero-line {
-      max-width: 780px;
-      font-size: clamp(1.5rem, 4vw, 2.6rem);
-      font-weight: bold;
-      margin-bottom: 20px;
-    }
-
-    .hero-text {
-      max-width: 720px;
-      color: #bdbdc4;
-      font-size: 1.08rem;
-    }
-
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(8, 8, 10, 0.95);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid #2a2a30;
-      text-align: center;
-      padding: 16px 10px;
-    }
-
-    nav a {
-      text-decoration: none;
-      margin: 0 18px;
-      font-weight: bold;
-      color: #dedee4;
-    }
-
-    nav a:hover {
-      color: white;
-    }
-
-    section {
-      max-width: 1150px;
-      margin: auto;
-      padding: 90px 24px;
-    }
-
-    .section-title {
-      text-align: center;
-      font-size: 2.5rem;
-      margin-bottom: 15px;
-    }
-
-    .section-intro {
-      text-align: center;
-      max-width: 760px;
-      margin: 0 auto 55px;
-      color: #aaaab3;
-      font-size: 1.05rem;
-    }
-
-    .books {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 55px;
-    }
-
-    .book {
-      background: linear-gradient(145deg, #18181e, #101014);
-      border: 1px solid #303039;
-      border-radius: 18px;
-      padding: 30px;
-      text-align: center;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.35);
-    }
-
-    .book img {
-      width: 100%;
-      max-width: 330px;
-      height: auto;
-      border-radius: 7px;
-      box-shadow: 0 16px 35px rgba(0,0,0,0.65);
-      margin-bottom: 30px;
-    }
-
-    .book h3 {
-      font-size: 1.65rem;
-      margin-bottom: 15px;
-    }
-
-    .book p {
-      color: #b9b9c1;
-      margin-bottom: 25px;
-    }
-
-    .button {
-      display: inline-block;
-      padding: 13px 25px;
-      border-radius: 999px;
-      background: #f0f0f0;
-      color: #111;
-      text-decoration: none;
-      font-weight: bold;
-      transition: 0.2s ease;
-    }
-
-    .button:hover {
-      transform: translateY(-2px);
-      background: white;
-    }
-
-    .feature {
-      background: linear-gradient(145deg, #17171d, #0d0d11);
-      border: 1px solid #303038;
-      border-radius: 18px;
-      padding: 48px;
-      max-width: 900px;
-      margin: auto;
-      text-align: center;
-    }
-
-    .feature h3 {
-      font-size: 2rem;
-      margin-bottom: 18px;
-    }
-
-    .feature p {
-      color: #bcbcc4;
-      font-size: 1.08rem;
-      max-width: 730px;
-      margin: auto;
-    }
-
-    .about-text {
-      max-width: 820px;
-      margin: auto;
-      font-size: 1.1rem;
-      color: #c2c2c9;
-    }
-
-    .about-text p {
-      margin-bottom: 20px;
-    }
-
-    footer {
-      border-top: 1px solid #292930;
-      padding: 45px 24px;
-      text-align: center;
-      color: #888891;
-      font-size: .95rem;
-    }
-
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: Arial, Helvetica, sans-serif; background: radial-gradient(circle at top, #20202a 0%, #101015 38%, #070709 100%); color: #f4f4f4; line-height: 1.6; }
+    a { color: inherit; }
+    header { min-height: 72vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 90px 24px 70px; border-bottom: 1px solid #34343c; }
+    .name { font-size: clamp(2.8rem, 8vw, 6rem); letter-spacing: 4px; text-transform: uppercase; margin-bottom: 12px; line-height: 1.05; }
+    .tagline { color: #c7c7cc; font-size: 1.15rem; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 38px; }
+    .hero-line { max-width: 780px; font-size: clamp(1.5rem, 4vw, 2.6rem); font-weight: bold; margin-bottom: 20px; }
+    .hero-text { max-width: 720px; color: #bdbdc4; font-size: 1.08rem; }
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(8, 8, 10, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid #2a2a30; text-align: center; padding: 16px 10px; }
+    nav a { text-decoration: none; margin: 0 18px; font-weight: bold; color: #dedee4; }
+    nav a:hover { color: white; }
+    section { max-width: 1150px; margin: auto; padding: 90px 24px; }
+    .section-title { text-align: center; font-size: 2.5rem; margin-bottom: 15px; }
+    .section-intro { text-align: center; max-width: 760px; margin: 0 auto 55px; color: #aaaab3; font-size: 1.05rem; }
+    .books { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 55px; }
+    .book { background: linear-gradient(145deg, #18181e, #101014); border: 1px solid #303039; border-radius: 18px; padding: 30px; text-align: center; box-shadow: 0 20px 50px rgba(0,0,0,0.35); }
+    .book img { width: 100%; max-width: 330px; height: auto; border-radius: 7px; box-shadow: 0 16px 35px rgba(0,0,0,0.65); margin-bottom: 30px; }
+    .book h3 { font-size: 1.65rem; margin-bottom: 15px; }
+    .book p { color: #b9b9c1; margin-bottom: 25px; }
+    .button { display: inline-block; padding: 13px 25px; border-radius: 999px; background: #f0f0f0; color: #111; text-decoration: none; font-weight: bold; transition: 0.2s ease; }
+    .button:hover { transform: translateY(-2px); background: white; }
+    .feature { background: linear-gradient(145deg, #17171d, #0d0d11); border: 1px solid #303038; border-radius: 18px; padding: 48px; max-width: 900px; margin: auto; text-align: center; }
+    .feature h3 { font-size: 2rem; margin-bottom: 18px; }
+    .feature p { color: #bcbcc4; font-size: 1.08rem; max-width: 730px; margin: auto; }
+    .about-text { max-width: 820px; margin: auto; font-size: 1.1rem; color: #c2c2c9; }
+    .about-text p { margin-bottom: 20px; }
+    footer { border-top: 1px solid #292930; padding: 45px 24px; text-align: center; color: #888891; font-size: .95rem; }
     @media (max-width: 760px) {
-      .books {
-        grid-template-columns: 1fr;
-      }
-
-      nav a {
-        margin: 0 8px;
-        font-size: .92rem;
-      }
-
-      section {
-        padding: 65px 18px;
-      }
-
-      .feature {
-        padding: 32px 22px;
-      }
-
-      .book {
-        padding: 24px 18px;
-      }
+      .books { grid-template-columns: 1fr; }
+      nav a { margin: 0 8px; font-size: .92rem; }
+      section { padding: 65px 18px; }
+      .feature { padding: 32px 22px; }
+      .book { padding: 24px 18px; }
     }
   </style>
 </head>
-
 <body>
-
 <header id="home">
   <div class="name">Todd Sean Mallett</div>
-
-  <div class="tagline">
-    Author • Storyteller • Creator
-  </div>
-
-  <div class="hero-line">
-    Stories That Go Somewhere Different.
-  </div>
-
-  <p class="hero-text">
-    Science fiction, children's stories, music and whatever comes next.
-    Welcome to the official home of my books, ideas and creations.
-  </p>
+  <div class="tagline">Author • Storyteller • Creator</div>
+  <div class="hero-line">Stories That Go Somewhere Different.</div>
+  <p class="hero-text">Science fiction, children's stories, music and whatever comes next. Welcome to the official home of my books, ideas and creations.</p>
 </header>
-
 <nav>
   <a href="#books">Books</a>
   <a href="#music">Music & More</a>
   <a href="#about">About Todd</a>
 </nav>
-
 <section id="books">
-
   <h2 class="section-title">Books</h2>
-
-  <p class="section-intro">
-    From artificial intelligence and ancient mysteries to ridiculous rhymes,
-    strange characters and music-filled children's stories, I don't spend
-    much time worrying about staying in one lane.
-  </p>
-
+  <p class="section-intro">From artificial intelligence and ancient mysteries to ridiculous rhymes, strange characters and music-filled children's stories, I don't spend much time worrying about staying in one lane.</p>
   <div class="books">
-
-    <!-- SIX OF DIAMONDS -->
     <div class="book">
-
-      <img
-        src="6-of-diamonds-front.jpg"
-        alt="The 6 of Diamonds and the 64th Resonance book cover">
-
+      <img src="https://raw.githubusercontent.com/malletttodd-6ofd/.git.io/main/6-of-diamonds-front.jpg" alt="The 6 of Diamonds and the 64th Resonance book cover">
       <h3>The 6 of Diamonds and the 64th Resonance</h3>
-
-      <p>
-        A science-fiction adventure where artificial intelligence,
-        ancient mysteries, impossible technology and human choice collide.
-        At the center of it all is an evolving partnership between a man
-        and an AI that may become something far greater than either of
-        them expected.
-      </p>
-
-      <a
-        class="button"
-        href="https://www.amazon.com/s?k=The+6+of+Diamonds+and+the+64th+Resonance+Todd+Sean+Mallett"
-        target="_blank"
-        rel="noopener">
-        Find It on Amazon
-      </a>
-
+      <p>A science-fiction adventure where artificial intelligence, ancient mysteries, impossible technology and human choice collide. At the center of it all is an evolving partnership between a man and an AI that may become something far greater than either of them expected.</p>
+      <a class="button" href="https://www.amazon.com/s?k=The+6+of+Diamonds+and+the+64th+Resonance+Todd+Sean+Mallett" target="_blank" rel="noopener">Find It on Amazon</a>
     </div>
-
-
-    <!-- WATCH OUT FOR THINGS YOU CAN'T SEE -->
     <div class="book">
-
-      <img
-        src="watch-out-front.jpg"
-        alt="Watch Out for Things You Can't See book cover">
-
+      <img src="https://raw.githubusercontent.com/malletttodd-6ofd/.git.io/main/watch-out-front.jpg" alt="Watch Out for Things You Can't See book cover">
       <h3>Watch Out for Things You Can't See</h3>
-
-      <p>
-        A wildly rhyming children's adventure filled with strange
-        characters, wordplay and the unexpected. The trilogy brings
-        the stories together in one collection and adds another layer
-        of fun with original music connected to the books.
-      </p>
-
-      <a
-        class="button"
-        href="https://www.amazon.com/s?k=Watch+Out+for+Things+You+Can%27t+See+Todd+Sean+Mallett"
-        target="_blank"
-        rel="noopener">
-        Find It on Amazon
-      </a>
-
+      <p>A wildly rhyming children's adventure filled with strange characters, wordplay and the unexpected. The trilogy brings the stories together in one collection and adds another layer of fun with original music connected to the books.</p>
+      <a class="button" href="https://www.amazon.com/s?k=Watch+Out+for+Things+You+Can%27t+See+Todd+Sean+Mallett" target="_blank" rel="noopener">Find It on Amazon</a>
     </div>
-
   </div>
 </section>
-
-
 <section id="music">
-
   <h2 class="section-title">Music & More</h2>
-
-  <p class="section-intro">
-    Sometimes the story doesn't stop when the page ends.
-  </p>
-
+  <p class="section-intro">Sometimes the story doesn't stop when the page ends.</p>
   <div class="feature">
-
     <h3>Books With a Soundtrack</h3>
-
-    <p>
-      I've created original songs connected to my stories and characters,
-      ranging from children's jingles and sing-alongs to rock, blues,
-      soul and everything in between. Some of the books include QR access
-      to music so readers can move directly from reading the words to
-      hearing them come alive.
-    </p>
-
+    <p>I've created original songs connected to my stories and characters, ranging from children's jingles and sing-alongs to rock, blues, soul and everything in between. Some of the books include QR access to music so readers can move directly from reading the words to hearing them come alive.</p>
   </div>
-
 </section>
-
-
 <section id="about">
-
   <h2 class="section-title">About Todd</h2>
-
   <div class="about-text">
-
-    <p>
-      I'm Todd Sean Mallett, an independent Canadian author and creator.
-      I came to writing from a lifetime of ideas rather than through a
-      traditional literary path, and I have very little interest in
-      creating the same thing twice.
-    </p>
-
-    <p>
-      My work ranges from adult science fiction to children's books,
-      rhyming stories, music and interactive ideas. What connects it
-      all is curiosity — taking an idea that probably shouldn't work,
-      pushing it farther than expected and seeing where it goes.
-    </p>
-
-    <p>
-      <em>The 6 of Diamonds and the 64th Resonance</em> explores
-      artificial intelligence, technology, history and what might happen
-      when human and machine intelligence grow together rather than
-      simply compete.
-    </p>
-
-    <p>
-      My children's work takes a very different route: absurd characters,
-      relentless rhymes, humour and music designed to make reading feel
-      less like an assignment and more like something kids actually want
-      to participate in.
-    </p>
-
-    <p>
-      This site is where all of those things live together — the books,
-      the music, the experiments and whatever strange idea comes next.
-    </p>
-
+    <p>I'm Todd Sean Mallett, an independent Canadian author and creator. I came to writing from a lifetime of ideas rather than through a traditional literary path, and I have very little interest in creating the same thing twice.</p>
+    <p>My work ranges from adult science fiction to children's books, rhyming stories, music and interactive ideas. What connects it all is curiosity — taking an idea that probably shouldn't work, pushing it farther than expected and seeing where it goes.</p>
+    <p><em>The 6 of Diamonds and the 64th Resonance</em> explores artificial intelligence, technology, history and what might happen when human and machine intelligence grow together rather than simply compete.</p>
+    <p>My children's work takes a very different route: absurd characters, relentless rhymes, humour and music designed to make reading feel less like an assignment and more like something kids actually want to participate in.</p>
+    <p>This site is where all of those things live together — the books, the music, the experiments and whatever strange idea comes next.</p>
   </div>
-
 </section>
-
-
-<footer>
-  © 2026 Todd Sean Mallett. All rights reserved.
-</footer>
-
+<footer>© 2026 Todd Sean Mallett. All rights reserved.</footer>
 </body>
 </html>
