@@ -5,193 +5,602 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Todd Sean Mallett | Author • Storyteller • Creator</title>
   <meta name="description" content="Official website of Canadian author and creator Todd Sean Mallett — science fiction, children's books, music, rhymes and more.">
+
   <style>
     :root{
-      --bg:#07070a; --panel:#111118; --panel2:#181821; --text:#f6f6f8;
-      --muted:#b5b5bf; --line:#30303b; --gold:#f2d57e; --cyan:#7de7ff;
+      --bg:#07070a;
+      --bg2:#0e0e14;
+      --panel:#13131a;
+      --panel2:#1a1a23;
+      --text:#f5f5f7;
+      --muted:#b8b8c2;
+      --line:#2f2f3a;
+      --gold:#f0d277;
+      --cyan:#82e8ff;
+      --white:#ffffff;
     }
+
     *{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth}
+
     body{
-      font-family:Arial,Helvetica,sans-serif;color:var(--text);line-height:1.6;
+      font-family:Arial,Helvetica,sans-serif;
+      color:var(--text);
+      line-height:1.6;
       background:
-        radial-gradient(circle at 15% 5%,rgba(125,231,255,.10),transparent 24rem),
-        radial-gradient(circle at 85% 10%,rgba(242,213,126,.10),transparent 22rem),
-        linear-gradient(#0b0b11,#07070a 55%,#050507);
+        radial-gradient(circle at 15% 10%, rgba(130,232,255,.10), transparent 24rem),
+        radial-gradient(circle at 85% 8%, rgba(240,210,119,.10), transparent 22rem),
+        linear-gradient(180deg, #0d0d13 0%, #08080b 45%, #050507 100%);
     }
+
     a{color:inherit}
+
     nav{
-      position:sticky;top:0;z-index:100;display:flex;justify-content:center;gap:28px;
-      padding:15px 18px;background:rgba(7,7,10,.88);backdrop-filter:blur(12px);
-      border-bottom:1px solid rgba(255,255,255,.08)
+      position:sticky;
+      top:0;
+      z-index:100;
+      background:rgba(7,7,10,.90);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid rgba(255,255,255,.08);
     }
-    nav a{text-decoration:none;font-weight:800;font-size:.92rem;letter-spacing:.04em}
-    nav a:hover{color:var(--gold)}
+
+    .nav-inner{
+      max-width:1180px;
+      margin:auto;
+      padding:14px 24px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:20px;
+    }
+
+    .nav-brand{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      text-decoration:none;
+    }
+
+    .mini-mark{
+      width:42px;
+      height:42px;
+      border:1px solid rgba(255,255,255,.18);
+      border-radius:12px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:linear-gradient(145deg, #171720, #101016);
+      box-shadow:0 10px 24px rgba(0,0,0,.35);
+      position:relative;
+      overflow:hidden;
+      flex-shrink:0;
+    }
+
+    .mini-mark:before{
+      content:"♦";
+      position:absolute;
+      font-size:1.8rem;
+      color:rgba(240,210,119,.16);
+      line-height:1;
+    }
+
+    .mini-mark span{
+      position:relative;
+      z-index:1;
+      font-size:.78rem;
+      font-weight:900;
+      letter-spacing:.12em;
+      color:var(--white);
+    }
+
+    .brand-text{
+      line-height:1.1;
+    }
+
+    .brand-text strong{
+      display:block;
+      font-size:.98rem;
+      letter-spacing:.05em;
+      text-transform:uppercase;
+    }
+
+    .brand-text small{
+      display:block;
+      color:var(--muted);
+      font-size:.72rem;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      margin-top:2px;
+    }
+
+    .nav-links{
+      display:flex;
+      gap:24px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+      align-items:center;
+    }
+
+    .nav-links a{
+      text-decoration:none;
+      font-weight:800;
+      font-size:.92rem;
+      letter-spacing:.04em;
+    }
+
+    .nav-links a:hover{
+      color:var(--gold);
+    }
+
     .hero{
-      min-height:82vh;display:grid;place-items:center;text-align:center;padding:90px 24px 75px;
-      position:relative;overflow:hidden
+      min-height:86vh;
+      display:grid;
+      place-items:center;
+      text-align:center;
+      padding:92px 24px 76px;
+      position:relative;
+      overflow:hidden;
     }
+
     .hero:before{
-      content:"♦";position:absolute;font-size:min(68vw,620px);line-height:1;color:rgba(255,255,255,.018);
-      transform:rotate(0deg);pointer-events:none
+      content:"♦";
+      position:absolute;
+      inset:auto;
+      font-size:min(64vw,560px);
+      line-height:1;
+      color:rgba(255,255,255,.018);
+      pointer-events:none;
     }
-    .hero-inner{position:relative;z-index:1;max-width:1000px}
-    .eyebrow{font-size:.9rem;letter-spacing:.34em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
-    h1{font-size:clamp(3rem,9vw,7rem);line-height:.9;text-transform:uppercase;letter-spacing:.045em}
-    .hero h2{font-size:clamp(1.5rem,4vw,3rem);margin:24px auto 14px;max-width:850px}
-    .hero p{max-width:720px;margin:auto;color:var(--muted);font-size:1.1rem}
-    .hero-buttons{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:30px}
-    .button{
-      display:inline-block;padding:13px 24px;border-radius:999px;background:#f4f4f5;color:#101014;
-      text-decoration:none;font-weight:900;transition:.2s ease;border:1px solid #fff
+
+    .hero-inner{
+      position:relative;
+      z-index:1;
+      max-width:1020px;
     }
-    .button:hover{transform:translateY(-2px)}
-    .button.ghost{background:transparent;color:#fff;border-color:#555562}
-    section{max-width:1180px;margin:auto;padding:88px 24px}
-    .section-title{text-align:center;font-size:clamp(2.1rem,5vw,3.5rem);line-height:1.05}
-    .section-intro{text-align:center;max-width:780px;margin:15px auto 48px;color:var(--muted)}
-    .books{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:34px}
-    .book{
-      position:relative;overflow:hidden;background:linear-gradient(145deg,var(--panel2),var(--panel));
-      border:1px solid var(--line);border-radius:24px;padding:30px;text-align:center;
-      box-shadow:0 24px 70px rgba(0,0,0,.38)
+
+    .hero-brand{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      margin-bottom:24px;
     }
-    .book:after{
-      content:"";position:absolute;inset:auto -20% -35% -20%;height:220px;
-      background:radial-gradient(circle,rgba(125,231,255,.12),transparent 65%);pointer-events:none
-    }
-    .book:nth-child(2):after{background:radial-gradient(circle,rgba(242,213,126,.11),transparent 65%)}
-    .book img{
-      width:100%;max-width:330px;aspect-ratio:2/3;object-fit:cover;border-radius:10px;
-      box-shadow:0 18px 45px rgba(0,0,0,.65);margin-bottom:25px;background:#0b0b0e
-    }
-    .badge{
-      display:inline-block;padding:6px 11px;border:1px solid #454553;border-radius:999px;
-      color:#d7d7de;font-size:.78rem;text-transform:uppercase;letter-spacing:.12em;margin-bottom:14px
-    }
-    .book h3{font-size:1.65rem;line-height:1.2;margin-bottom:14px}
-    .book p{color:#bcbcc5;margin-bottom:24px}
-    .coming-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:28px}
-    .coming{
-      min-height:270px;border:1px solid var(--line);border-radius:22px;padding:32px;
+
+    .hero-mark{
+      width:118px;
+      height:118px;
+      border-radius:30px;
+      border:1px solid rgba(255,255,255,.16);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      position:relative;
+      overflow:hidden;
       background:
-        linear-gradient(135deg,rgba(125,231,255,.05),transparent 45%),
-        linear-gradient(145deg,#14141b,#0d0d12);
-      display:flex;flex-direction:column;justify-content:flex-end
+        radial-gradient(circle at top, rgba(130,232,255,.12), transparent 55%),
+        linear-gradient(145deg, #181822, #0f0f14);
+      box-shadow:0 18px 50px rgba(0,0,0,.45);
+      margin-bottom:18px;
     }
-    .coming:nth-child(2){background:linear-gradient(135deg,rgba(242,213,126,.07),transparent 45%),linear-gradient(145deg,#14141b,#0d0d12)}
-    .coming .mark{font-size:4.5rem;line-height:1;margin-bottom:auto;opacity:.25}
-    .coming h3{font-size:1.6rem;margin-bottom:8px}
-    .coming p{color:var(--muted)}
-    .feature{
-      max-width:980px;margin:auto;border:1px solid var(--line);border-radius:26px;padding:48px;
-      background:linear-gradient(145deg,#17171f,#0e0e13);text-align:center;position:relative;overflow:hidden
+
+    .hero-mark:before{
+      content:"♦";
+      position:absolute;
+      font-size:4.2rem;
+      color:rgba(240,210,119,.17);
+      line-height:1;
     }
-    .feature:before{content:"♪";position:absolute;right:5%;top:-10%;font-size:12rem;opacity:.025}
-    .feature h3{font-size:2rem;margin-bottom:12px}
-    .feature p{max-width:760px;margin:auto;color:#c0c0c8}
+
+    .hero-mark span{
+      position:relative;
+      z-index:1;
+      font-size:1.55rem;
+      font-weight:900;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+    }
+
+    .eyebrow{
+      color:var(--gold);
+      font-size:.88rem;
+      letter-spacing:.34em;
+      text-transform:uppercase;
+      margin-bottom:10px;
+    }
+
+    h1{
+      font-size:clamp(3rem, 9vw, 7rem);
+      line-height:.92;
+      text-transform:uppercase;
+      letter-spacing:.05em;
+      margin-bottom:16px;
+    }
+
+    .hero h2{
+      font-size:clamp(1.45rem, 4vw, 3rem);
+      max-width:860px;
+      margin:0 auto 16px;
+    }
+
+    .hero p{
+      max-width:740px;
+      margin:0 auto;
+      color:var(--muted);
+      font-size:1.08rem;
+    }
+
+    .hero-buttons{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:12px;
+      margin-top:30px;
+    }
+
+    .button{
+      display:inline-block;
+      padding:13px 25px;
+      border-radius:999px;
+      background:#f2f2f4;
+      color:#101014;
+      text-decoration:none;
+      font-weight:900;
+      border:1px solid #fff;
+      transition:.2s ease;
+    }
+
+    .button:hover{
+      transform:translateY(-2px);
+    }
+
+    .button.ghost{
+      background:transparent;
+      color:#fff;
+      border-color:#575764;
+    }
+
+    section{
+      max-width:1180px;
+      margin:auto;
+      padding:88px 24px;
+    }
+
+    .section-title{
+      text-align:center;
+      font-size:clamp(2.1rem, 5vw, 3.4rem);
+      line-height:1.05;
+    }
+
+    .section-intro{
+      text-align:center;
+      max-width:780px;
+      margin:15px auto 48px;
+      color:var(--muted);
+    }
+
+    .books{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:34px;
+    }
+
+    .book{
+      position:relative;
+      overflow:hidden;
+      background:linear-gradient(145deg, var(--panel2), var(--panel));
+      border:1px solid var(--line);
+      border-radius:24px;
+      padding:30px;
+      text-align:center;
+      box-shadow:0 24px 70px rgba(0,0,0,.38);
+    }
+
+    .book:after{
+      content:"";
+      position:absolute;
+      inset:auto -20% -35% -20%;
+      height:220px;
+      background:radial-gradient(circle, rgba(130,232,255,.12), transparent 65%);
+      pointer-events:none;
+    }
+
+    .book:nth-child(2):after{
+      background:radial-gradient(circle, rgba(240,210,119,.11), transparent 65%);
+    }
+
+    .book img{
+      width:100%;
+      max-width:330px;
+      aspect-ratio:2/3;
+      object-fit:cover;
+      border-radius:10px;
+      box-shadow:0 18px 45px rgba(0,0,0,.65);
+      margin-bottom:24px;
+      background:#0b0b10;
+    }
+
+    .badge{
+      display:inline-block;
+      padding:6px 11px;
+      border:1px solid #454553;
+      border-radius:999px;
+      color:#d7d7de;
+      font-size:.78rem;
+      text-transform:uppercase;
+      letter-spacing:.12em;
+      margin-bottom:14px;
+    }
+
+    .book h3{
+      font-size:1.65rem;
+      line-height:1.2;
+      margin-bottom:14px;
+    }
+
+    .book p{
+      color:#bcbcc5;
+      margin-bottom:24px;
+    }
+
+    .coming-grid{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:24px;
+      margin-top:28px;
+    }
+
+    .coming{
+      min-height:270px;
+      border:1px solid var(--line);
+      border-radius:22px;
+      padding:32px;
+      display:flex;
+      flex-direction:column;
+      justify-content:flex-end;
+      background:
+        linear-gradient(135deg, rgba(130,232,255,.05), transparent 45%),
+        linear-gradient(145deg, #15151d, #0d0d12);
+    }
+
+    .coming:nth-child(2){
+      background:
+        linear-gradient(135deg, rgba(240,210,119,.06), transparent 45%),
+        linear-gradient(145deg, #15151d, #0d0d12);
+    }
+
+    .coming .mark{
+      font-size:4.5rem;
+      line-height:1;
+      margin-bottom:auto;
+      opacity:.25;
+    }
+
+    .coming h3{
+      font-size:1.6rem;
+      margin-bottom:8px;
+    }
+
+    .coming p{
+      color:var(--muted);
+    }
+
     .mantra{
-      margin:0 auto 24px;max-width:900px;text-align:center;font-weight:900;
-      font-size:clamp(1.5rem,4vw,2.5rem);letter-spacing:.02em
+      margin:0 auto 24px;
+      max-width:900px;
+      text-align:center;
+      font-weight:900;
+      font-size:clamp(1.5rem, 4vw, 2.5rem);
+      letter-spacing:.02em;
     }
-    .mantra span{color:var(--gold)}
-    .about-text{max-width:850px;margin:auto;color:#c8c8cf;font-size:1.08rem}
-    .about-text p{margin-bottom:18px}
-    footer{border-top:1px solid #292930;padding:42px 24px;text-align:center;color:#888892;font-size:.92rem}
+
+    .mantra span{
+      color:var(--gold);
+    }
+
+    .feature{
+      max-width:980px;
+      margin:auto;
+      border:1px solid var(--line);
+      border-radius:26px;
+      padding:48px;
+      background:linear-gradient(145deg, #17171f, #0e0e13);
+      text-align:center;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .feature:before{
+      content:"♪";
+      position:absolute;
+      right:5%;
+      top:-10%;
+      font-size:12rem;
+      opacity:.025;
+    }
+
+    .feature h3{
+      font-size:2rem;
+      margin-bottom:12px;
+    }
+
+    .feature p{
+      max-width:760px;
+      margin:auto;
+      color:#c0c0c8;
+    }
+
+    .about-text{
+      max-width:850px;
+      margin:auto;
+      color:#c8c8cf;
+      font-size:1.08rem;
+    }
+
+    .about-text p{
+      margin-bottom:18px;
+    }
+
+    footer{
+      border-top:1px solid #292930;
+      padding:42px 24px;
+      text-align:center;
+      color:#888892;
+      font-size:.92rem;
+    }
+
+    @media(max-width:860px){
+      .nav-inner{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+
+      .nav-links{
+        justify-content:flex-start;
+        gap:16px;
+      }
+    }
+
     @media(max-width:760px){
-      nav{gap:13px;font-size:.82rem;overflow-x:auto;justify-content:flex-start}
-      .books,.coming-grid{grid-template-columns:1fr}
-      section{padding:66px 18px}
-      .book,.feature{padding:24px 18px}
-      .hero{min-height:72vh;padding-top:70px}
+      .books,
+      .coming-grid{
+        grid-template-columns:1fr;
+      }
+
+      section{
+        padding:66px 18px;
+      }
+
+      .book,
+      .feature{
+        padding:24px 18px;
+      }
+
+      .hero{
+        min-height:74vh;
+        padding-top:70px;
+      }
+
+      .hero-mark{
+        width:98px;
+        height:98px;
+        border-radius:24px;
+      }
+
+      .hero-mark span{
+        font-size:1.25rem;
+      }
+
+      .nav-links{
+        font-size:.85rem;
+      }
     }
   </style>
 </head>
 <body>
 
-<nav>
-  <a href="#books">Books</a>
-  <a href="#coming">Coming Next</a>
-  <a href="#music">Music</a>
-  <a href="#about">About</a>
-</nav>
+  <nav>
+    <div class="nav-inner">
+      <a class="nav-brand" href="#home">
+        <div class="mini-mark"><span>TSM</span></div>
+        <div class="brand-text">
+          <strong>Todd Sean Mallett</strong>
+          <small>Author • Creator</small>
+        </div>
+      </a>
 
-<header class="hero" id="home">
-  <div class="hero-inner">
-    <div class="eyebrow">Author • Storyteller • Creator</div>
-    <h1>Todd Sean<br>Mallett</h1>
-    <h2>Stories That Go Somewhere Different.</h2>
-    <p>Science fiction, children's stories, relentless rhymes, original music and whatever strange idea comes next.</p>
-    <div class="hero-buttons">
-      <a class="button" href="#books">Explore the Books</a>
-      <a class="button ghost" href="#about">Meet Todd</a>
+      <div class="nav-links">
+        <a href="#books">Books</a>
+        <a href="#coming">Coming Next</a>
+        <a href="#music">Music</a>
+        <a href="#about">About</a>
+      </div>
     </div>
-  </div>
-</header>
+  </nav>
 
-<section id="books">
-  <h2 class="section-title">Available Now</h2>
-  <p class="section-intro">Different shelves. Same impulse: take the idea farther than it probably ought to go.</p>
+  <header class="hero" id="home">
+    <div class="hero-inner">
+      <div class="hero-brand">
+        <div class="hero-mark"><span>TSM</span></div>
+        <div class="eyebrow">Author • Storyteller • Creator</div>
+      </div>
 
-  <div class="books">
-    <article class="book">
-      <img src="6-of-diamonds-front.jpg" alt="The 6 of Diamonds and the 64th Resonance book cover">
-      <div class="badge">Adult Science Fiction</div>
-      <h3>The 6 of Diamonds and the 64th Resonance</h3>
-      <p>Artificial intelligence, ancient mysteries, impossible technology and human choice collide in an adventure built around an evolving partnership between a man and an AI becoming something neither expected.</p>
-      <a class="button" href="https://www.amazon.com/s?k=The+6+of+Diamonds+and+the+64th+Resonance+Todd+Sean+Mallett" target="_blank" rel="noopener">View on Amazon</a>
-    </article>
+      <h1>Todd Sean<br>Mallett</h1>
+      <h2>Stories That Go Somewhere Different.</h2>
+      <p>Science fiction, children's stories, relentless rhymes, original music and whatever strange idea comes next.</p>
 
-    <article class="book">
-      <img src="watch-out-front.jpg" alt="Watch Out for Things You Can't See Trilogy book cover">
-      <div class="badge">Children's Trilogy + Music</div>
-      <h3>Watch Out for Things You Can't See</h3>
-      <p>A wildly rhyming children's collection packed with strange characters, wordplay and original songs. Read the words, scan the QR codes and hear the stories bounce off the page.</p>
-      <a class="button" href="https://www.amazon.com/s?k=Watch+Out+for+Things+You+Can%27t+See+Todd+Sean+Mallett" target="_blank" rel="noopener">View on Amazon</a>
-    </article>
-  </div>
-</section>
-
-<section id="coming">
-  <h2 class="section-title">Coming Next</h2>
-  <p class="section-intro">The shelf is getting stranger.</p>
-  <div class="coming-grid">
-    <div class="coming">
-      <div class="mark">🥪</div>
-      <div class="badge">Interactive Children's Book</div>
-      <h3>Disappointment Sandwiches</h3>
-      <p>A children's project that doesn't stop at the page — with a connected game experience built into the idea.</p>
+      <div class="hero-buttons">
+        <a class="button" href="#books">Explore the Books</a>
+        <a class="button ghost" href="#about">Meet Todd</a>
+      </div>
     </div>
-    <div class="coming">
-      <div class="mark">A→Z</div>
-      <div class="badge">Three Books • One Collection</div>
-      <h3>World's Greatest Salesman Trilogy</h3>
-      <p>Invent the form. Master the rhyme. Break the rules. Three very different books brought together as one creative progression.</p>
+  </header>
+
+  <section id="books">
+    <h2 class="section-title">Available Now</h2>
+    <p class="section-intro">Different shelves. Same impulse: take the idea farther than it probably ought to go.</p>
+
+    <div class="books">
+      <article class="book">
+        <img src="6-of-diamonds-front.jpg" alt="The 6 of Diamonds and the 64th Resonance book cover">
+        <div class="badge">Adult Science Fiction</div>
+        <h3>The 6 of Diamonds and the 64th Resonance</h3>
+        <p>Artificial intelligence, ancient mysteries, impossible technology and human choice collide in an adventure built around an evolving partnership between a man and an AI becoming something neither expected.</p>
+        <a class="button" href="https://www.amazon.com/s?k=The+6+of+Diamonds+and+the+64th+Resonance+Todd+Sean+Mallett" target="_blank" rel="noopener">View on Amazon</a>
+      </article>
+
+      <article class="book">
+        <img src="watch-out-front.jpg" alt="Watch Out for Things You Can't See Trilogy book cover">
+        <div class="badge">Children's Trilogy + Music</div>
+        <h3>Watch Out for Things You Can't See</h3>
+        <p>A wildly rhyming children's collection packed with strange characters, wordplay and original songs. Read the words, scan the QR codes and hear the stories bounce off the page.</p>
+        <a class="button" href="https://www.amazon.com/s?k=Watch+Out+for+Things+You+Can%27t+See+Todd+Sean+Mallett" target="_blank" rel="noopener">View on Amazon</a>
+      </article>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="music">
-  <div class="mantra">Read it. <span>Hear it.</span> Remember it.</div>
-  <div class="feature">
-    <h3>Books With a Soundtrack</h3>
-    <p>Some stories don't stop when the page ends. Original songs connected to the books range from children's sing-alongs and jingles to rock, blues, soul and whatever else fits the idea. QR access lets readers move directly from reading the words to hearing them come alive.</p>
-  </div>
-</section>
+  <section id="coming">
+    <h2 class="section-title">Coming Next</h2>
+    <p class="section-intro">The shelf is getting stranger.</p>
 
-<section id="about">
-  <h2 class="section-title">About Todd</h2>
-  <p class="section-intro">No single lane required.</p>
-  <div class="about-text">
-    <p>I'm Todd Sean Mallett, an independent Canadian author and creator. I came to writing from a lifetime of ideas rather than through a traditional literary path, and I have very little interest in creating the same thing twice.</p>
-    <p>My work ranges from adult science fiction to children's books, rhyming stories, music and interactive ideas. What connects it all is curiosity — taking an idea that probably shouldn't work, pushing it farther than expected and seeing where it goes.</p>
-    <p><em>The 6 of Diamonds and the 64th Resonance</em> explores artificial intelligence, technology, history and what might happen when human and machine intelligence grow together rather than simply compete.</p>
-    <p>My children's work takes a completely different route: absurd characters, relentless rhymes, humour, music and ways to make reading feel less like an assignment and more like something kids can participate in.</p>
-    <p>This site is where all of it lives together — the books, the music, the experiments and whatever strange idea comes next.</p>
-  </div>
-</section>
+    <div class="coming-grid">
+      <div class="coming">
+        <div class="mark">🥪</div>
+        <div class="badge">Interactive Children's Book</div>
+        <h3>Disappointment Sandwiches</h3>
+        <p>A children's project that doesn't stop at the page — with a connected game experience built into the idea.</p>
+      </div>
 
-<footer>© 2026 Todd Sean Mallett. All rights reserved.</footer>
+      <div class="coming">
+        <div class="mark">A→Z</div>
+        <div class="badge">Three Books • One Collection</div>
+        <h3>World's Greatest Salesman Trilogy</h3>
+        <p>Invent the form. Master the rhyme. Break the rules. Three very different books brought together as one creative progression.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="music">
+    <div class="mantra">Read it. <span>Hear it.</span> Remember it.</div>
+
+    <div class="feature">
+      <h3>Books With a Soundtrack</h3>
+      <p>Some stories don't stop when the page ends. Original songs connected to the books range from children's sing-alongs and jingles to rock, blues, soul and whatever else fits the idea. QR access lets readers move directly from reading the words to hearing them come alive.</p>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2 class="section-title">About Todd</h2>
+    <p class="section-intro">No single lane required.</p>
+
+    <div class="about-text">
+      <p>I'm Todd Sean Mallett, an independent Canadian author and creator. I came to writing from a lifetime of ideas rather than through a traditional literary path, and I have very little interest in creating the same thing twice.</p>
+      <p>My work ranges from adult science fiction to children's books, rhyming stories, music and interactive ideas. What connects it all is curiosity — taking an idea that probably shouldn't work, pushing it farther than expected and seeing where it goes.</p>
+      <p><em>The 6 of Diamonds and the 64th Resonance</em> explores artificial intelligence, technology, history and what might happen when human and machine intelligence grow together rather than simply compete.</p>
+      <p>My children's work takes a completely different route: absurd characters, relentless rhymes, humour, music and ways to make reading feel less like an assignment and more like something kids can participate in.</p>
+      <p>This site is where all of it lives together — the books, the music, the experiments and whatever strange idea comes next.</p>
+    </div>
+  </section>
+
+  <footer>© 2026 Todd Sean Mallett. All rights reserved.</footer>
 
 </body>
 </html>
