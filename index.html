@@ -373,6 +373,10 @@
     .cover-sandwiches img{
       transform:scale(1.16);
     }
+    .salesman-cover{width:100%;height:100%;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:16px;padding:20px;text-align:center;background:linear-gradient(155deg,#272038,#111119 65%,#352b20);border:1px solid rgba(240,210,119,.35);color:var(--gold)}
+    .salesman-cover .salesman-symbol{font-size:3.5rem;font-weight:900;line-height:1}
+    .salesman-cover strong{font-size:1.3rem;line-height:1.2;letter-spacing:.04em;text-transform:uppercase}
+    .salesman-cover small{color:var(--text);font-size:.82rem;letter-spacing:.08em}
 
     .badge{
       display:inline-block;
@@ -668,11 +672,13 @@
         <a class="button" href="https://www.amazon.com/s?k=Watch+Out+for+Things+You+Can%27t+See+Todd+Sean+Mallett" target="_blank" rel="noopener">View on Amazon</a>
       </article>
       <article class="book">
-        <div class="book-cover"><div class="cover-crop cover-sandwiches"><img src="71sBJllrApL._SY342_.jpg" alt="Disappointment Sandwiches book cover"></div></div>
-        <div class="badge">Back Under development</div>
-        <h3>Disappointment Sandwiches</h3>
-        <p>A children's book built to keep going after the last page, with a connected game concept that turns the idea into something readers can play as well as read.</p>
-        <a class="button" href="https://www.amazon.com/s?k=Disappointment+Sandwiches+Todd+Sean+Mallett" target="_blank" rel="noopener">Check for Updates</a>
+        <div class="book-cover"><div class="cover-crop salesman-cover" role="img" aria-label="Temporary design for The World's Greatest Salesman Trilogy">
+          <div class="salesman-symbol">A→Z</div><strong>The World's Greatest Salesman</strong><small>Three Books • One Trilogy</small>
+        </div></div>
+        <div class="badge">Children's Rhymes • Trilogy</div>
+        <h3>The World's Greatest Salesman Trilogy</h3>
+        <p>Invent the form. Master the rhyme. Break the rules. Three books of imaginative salesmanship, rhymes and bent limericks brought together in one collection.</p>
+        <a class="button" href="https://a.co/d/07ru6cu5" target="_blank" rel="noopener">View Kindle on Amazon</a>
       </article>
     </div>
   </section>
@@ -682,29 +688,18 @@
   <section id="coming">
     <h2 class="section-title">Coming Next</h2>
     <p class="section-intro">The shelf is getting stranger.</p>
-
-   <div class="coming-grid">
-  <div class="coming">
-    <img src="Disappointment%20World%20Game.png"
-         alt="Disappointment Sandwiches Board Game"
-         class="coming-image">
-
-    <div class="badge">Coming Next • Board Game</div>
-
-    <h3>Disappointment Sandwiches: The Board Game</h3>
-
-    <p>
-      The world of <em>Disappointment Sandwiches</em> moves off the page and onto the table —
-      a board game built from the same ridiculous idea, characters and sense of play.
-    </p>
-  </div>
-</div>
-
+    <div class="coming-grid">
       <div class="coming">
-        <div class="mark">A→Z</div>
-        <div class="badge">Three Books • One Collection</div>
-        <h3>World's Greatest Salesman Trilogy</h3>
-        <p>Invent the form. Master the rhyme. Break the rules. Three very different books brought together as one creative progression.</p>
+        <img src="71sBJllrApL._SY342_.jpg" alt="Disappointment Sandwiches book cover" class="coming-image">
+        <div class="badge">In Development • Children's Book</div>
+        <h3>Disappointment Sandwiches</h3>
+        <p>Temporarily off the menu while the story and illustrations get a fresh polish. Please pardon our disappointment!</p>
+      </div>
+      <div class="coming">
+        <img src="Disappointment%20World%20Game.png" alt="Disappointment World board game" class="coming-image">
+        <div class="badge">In Development • Board Game</div>
+        <h3>Disappointment World: The Board Game</h3>
+        <p>The same ridiculous world is making its way from the page to the tabletop — with characters, surprises and plenty of playful disappointment.</p>
       </div>
     </div>
   </section>
