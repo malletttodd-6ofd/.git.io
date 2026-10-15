@@ -3,7 +3,7 @@
 <head>
   <link rel="icon" type="image/png" href="Mybrandlogo.png">
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">logo
   <title>Todd Sean Mallett | Author • Storyteller • Creator</title>
   <meta name="description" content="Official website of Canadian author and creator Todd Sean Mallett — science fiction, children's books, music, rhymes and more.">
 
@@ -599,6 +599,7 @@
     <div class="nav-inner">
       <a class="nav-brand" href="#home">
         <div class="mini-mark"><img src="Mybrandlogo.png" alt="TSM logo"></div>
+        
         <div class="brand-text">
           <strong>Todd Sean Mallett</strong>
           <small>Author • Creator</small>
@@ -615,25 +616,65 @@
     </div>
   </nav>
 
-  <header class="hero" id="home">
-    <div class="hero-inner">
-      <div class="hero-brand">
         
 <div class="hero-mark">
-  <img src="Mybrandlogo.png" alt="TSM logo">
+  
+<!-- 1. THE CSS (THE STYLE & HOVER ANIMATION) -->
+<style>
+  /* Container that holds your TSM and Diamond */
+  .logo-container {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    /* Smoothly animates the float and glow over 0.4 seconds */
+    transition: transform 0.4s ease, filter 0.4s ease; 
+  }
 
-  <svg viewBox="0 0 1000 1000"
-       aria-hidden="true"
-       style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:2;">
+  /* The Red Diamond */
+  .logo-diamond {
+    /* Replace flat red with a deep, sophisticated gradient */
+    fill: url(#ruby-gradient); 
+    transition: fill 0.3s ease; 
+  }
 
-    <style>
-      .red-trace {
-        stroke-dasharray: 4 96;
-        stroke-dashoffset: 0;
-        opacity: 0;
-        filter: drop-shadow(0 0 7px #ff3045);
-        animation: diamond-trace 2.8s linear 0.4s 1 forwards;
-      }
+  /* The TSM Initials */
+  .logo-text {
+    font-family: 'Montserrat', 'Inter', sans-serif; /* Clean modern font */
+    font-weight: 800; /* Extra bold */
+    letter-spacing: -0.03em; /* Premium tight spacing */
+    fill: #FFFFFF; /* Clean white text */
+  }
+
+  /* THE MODERN "POP" - Hover Effects */
+  .logo-container:hover {
+    transform: translateY(-4px); /* Floats up gently by 4 pixels */
+    filter: drop-shadow(0 8px 20px rgba(220, 20, 60, 0.4)); /* Soft, diffused ruby glow */
+  }
+</style>
+
+
+<!-- 2. THE HTML (THE RAW SHAPES & TEXT) -->
+<div class="logo-container">
+  <svg width="150" height="150" viewBox="0 0 100 100" xmlns="http://w3.org">
+    <!-- DEFINES THE MODERN RED GRADIENT -->
+    <defs>
+      <linearGradient id="ruby-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#9B111E" /> <!-- Deep Crimson -->
+        <stop offset="100%" stop-color="#E0115F" /> <!-- Bright Ruby -->
+      </linearGradient>
+    </defs>
+
+    <!-- THE DIAMOND (Rotated square) -->
+    <rect class="logo-diamond" x="25" y="25" width="50" height="50" transform="rotate(45 50 50)" />
+
+    <!-- THE TSM TEXT (Centered) -->
+    <text class="logo-text" x="50" y="55" dominant-baseline="middle" text-anchor="middle" font-size="16">TSM</text>
+  </svg>
+</div>
+
+
+
+
 
     
 </div>
