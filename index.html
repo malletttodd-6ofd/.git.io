@@ -618,58 +618,9 @@
 
         
 <div class="hero-mark">
+  <img>Mybrandlogo.png
   
-<!-- 1. THE CSS (THE STYLE & HOVER ANIMATION) -->
-<style>
-  /* Container that holds your TSM and Diamond */
-  .logo-container {
-    display: inline-block;
-    position: relative;
-    cursor: pointer;
-    /* Smoothly animates the float and glow over 0.4 seconds */
-    transition: transform 0.4s ease, filter 0.4s ease; 
-  }
 
-  /* The Red Diamond */
-  .logo-diamond {
-    /* Replace flat red with a deep, sophisticated gradient */
-    fill: url(#ruby-gradient); 
-    transition: fill 0.3s ease; 
-  }
-
-  /* The TSM Initials */
-  .logo-text {
-    font-family: 'Montserrat', 'Inter', sans-serif; /* Clean modern font */
-    font-weight: 800; /* Extra bold */
-    letter-spacing: -0.03em; /* Premium tight spacing */
-    fill: #FFFFFF; /* Clean white text */
-  }
-
-  /* THE MODERN "POP" - Hover Effects */
-  .logo-container:hover {
-    transform: translateY(-4px); /* Floats up gently by 4 pixels */
-    filter: drop-shadow(0 8px 20px rgba(220, 20, 60, 0.4)); /* Soft, diffused ruby glow */
-  }
-</style>
-
-
-<!-- 2. THE HTML (THE RAW SHAPES & TEXT) -->
-<div class="logo-container">
-  <svg width="150" height="150" viewBox="0 0 100 100" xmlns="http://w3.org">
-    <!-- DEFINES THE MODERN RED GRADIENT -->
-    <defs>
-      <linearGradient id="ruby-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stop-color="#9B111E" /> <!-- Deep Crimson -->
-        <stop offset="100%" stop-color="#E0115F" /> <!-- Bright Ruby -->
-      </linearGradient>
-    </defs>
-
-    <!-- THE DIAMOND (Rotated square) -->
-    <rect class="logo-diamond" x="25" y="25" width="50" height="50" transform="rotate(45 50 50)" />
-
-    <!-- THE TSM TEXT (Centered) -->
-    <text class="logo-text" x="50" y="55" dominant-baseline="middle" text-anchor="middle" font-size="16">TSM</text>
-  </svg>
 </div>
 
 
