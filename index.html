@@ -516,10 +516,7 @@
     .soundtrack-book img{height:100%;object-fit:cover}
     .soundtrack-book{
       perspective:900px;
-      .soundtrack-item:hover .cover-crop{
-      transform:rotateY(-1deg) translateY(-3px) scale(1.015);
-      box-shadow:0 28px 55px rgba(0,0,0,.78);
-    }
+     
 
     .soundtrack-book img{
       transform:rotateY(-3deg);
@@ -529,6 +526,10 @@
 
     .soundtrack-item:hover .soundtrack-book img{
       transform:rotateY(-1deg) translateY(-3px) scale(1.015);
+       .soundtrack-item:hover .cover-crop{
+      transform:rotateY(-1deg) translateY(-3px) scale(1.015);
+      box-shadow:0 28px 55px rgba(0,0,0,.78);
+    
     }
     .soundtrack-book.salesman-cover{gap:10px;padding:12px}
     .soundtrack-book.salesman-cover .salesman-symbol{font-size:2.5rem}
