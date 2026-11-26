@@ -498,21 +498,37 @@
       margin:auto;
       color:#c0c0c8;
     }
-    .soundtrack-showcase{
+  
+.soundtrack-showcase{
       display:grid;
       grid-template-columns:1fr 1fr;
+      grid-template-rows:auto auto;
       align-items:start;
       gap:24px;
       margin:28px auto 20px;
     }
+
     .soundtrack-showcase .soundtrack-banner{
       grid-column:1 / -1;
       grid-row:1;
       width:100%;
       border-radius:14px;
       box-shadow:0 12px 30px rgba(0,0,0,.35);
+    }
+
+    .soundtrack-showcase .soundtrack-item:first-child{
+      grid-column:1;
+      grid-row:2;
+    }
+
+    .soundtrack-showcase .soundtrack-item:last-child{
+      grid-column:2;
+      grid-row:2;
+    }
+
  }
     
+
 
 .soundtrack-book{
       aspect-ratio:2/3;
@@ -530,25 +546,12 @@
       transition:transform .25s ease, box-shadow .25s ease;
     }
 
-    .soundtrack-item:hover .soundtrack-book img{
-      transform:rotateY(-1deg) translateY(-3px) scale(1.015);
-      box-shadow:0 28px 55px rgba(0,0,0,.78);
-    }
-
+    .soundtrack-item:hover .soundtrack-book img,
     .soundtrack-item:hover .cover-crop{
       transform:rotateY(-1deg) translateY(-3px) scale(1.015);
       box-shadow:0 28px 55px rgba(0,0,0,.78);
-    
     }
 
-
-    .soundtrack-item:hover .soundtrack-book img{
-      transform:rotateY(-1deg) translateY(-3px) scale(1.015);
-       .soundtrack-item:hover .cover-crop{
-      transform:rotateY(-1deg) translateY(-3px) scale(1.015);
-      box-shadow:0 28px 55px rgba(0,0,0,.78);
-    
-    }
     .soundtrack-book.salesman-cover{gap:10px;padding:12px}
     .soundtrack-book.salesman-cover .salesman-symbol{font-size:2.5rem}
     .soundtrack-book.salesman-cover strong{font-size:clamp(.8rem,1.35vw,1.15rem)}
