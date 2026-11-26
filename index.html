@@ -513,6 +513,7 @@
       box-shadow:0 12px 30px rgba(0,0,0,.35);
  }
     
+
 .soundtrack-book{
       aspect-ratio:2/3;
       overflow:hidden;
@@ -529,10 +530,16 @@
       transition:transform .25s ease, box-shadow .25s ease;
     }
 
-    .soundtrack-item:hover .soundtrack-book img,
+    .soundtrack-item:hover .soundtrack-book img{
+      transform:rotateY(-1deg) translateY(-3px) scale(1.015);
+      box-shadow:0 28px 55px rgba(0,0,0,.78);
+    }
+
     .soundtrack-item:hover .cover-crop{
       transform:rotateY(-1deg) translateY(-3px) scale(1.015);
       box-shadow:0 28px 55px rgba(0,0,0,.78);
+    }
+
     }
 
 
